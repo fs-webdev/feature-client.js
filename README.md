@@ -1,4 +1,4 @@
-# Feature-Client.js
+# Feature-Client.js [![Build Status](https://travis-ci.org/fs-webdev/feature-client.svg?branch=master)](https://travis-ci.org/fs-webdev/feature-client)
 
 This is a Node.js library for the consumption of [XPRMNTL XAAS](https://github.com/fs-webdev/feature) (experiments As A Service).
 
