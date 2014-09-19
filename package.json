@@ -17,5 +17,5 @@
   "scripts": {
     "test": "NODE_ENV=test `pwd`/node_modules/.bin/mocha --reporter spec test/server/*"
   },
-  "license": "BSD"
+  "license": "GPL3"
 }
