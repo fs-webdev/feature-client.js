@@ -1,6 +1,7 @@
+[![XPRMNTL](https://raw.githubusercontent.com/XPRMNTL/XPRMNTL.github.io/master/images/ghLogo.jpg)](https://github.com/XPRMNTL/XPRMNTL.github.io)
 # Feature-Client.js [![Build Status](https://travis-ci.org/XPRMNTL/feature-client.svg?branch=master)](https://travis-ci.org/XPRMNTL/feature-client)
 
-This is a Node.js library for the consumption of [XPRMNTL XAAS](https://github.com/XPRMNTL/feature) (experiments As A Service).
+This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/feature) product.
 
 ```js
 var featureClient = require('feature-client');
