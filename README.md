@@ -1,5 +1,5 @@
 [![XPRMNTL](https://raw.githubusercontent.com/XPRMNTL/XPRMNTL.github.io/master/images/ghLogo.jpg)](https://github.com/XPRMNTL/XPRMNTL.github.io)
-# Feature-Client.js [![Build Status](https://travis-ci.org/XPRMNTL/feature-client.js.svg?branch=master)](https://travis-ci.org/XPRMNTL/feature-client.js)
+# Feature-Client.js [![Build Status](https://travis-ci.org/XPRMNTL/feature-client.js.svg?branch=master)](https://travis-ci.org/XPRMNTL/feature-client.js)[![NPM version](https://img.shields.io/npm/v/feature-client.svg)](https://www.npmjs.org/package/feature-client)
 
 This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/feature) product.
 
