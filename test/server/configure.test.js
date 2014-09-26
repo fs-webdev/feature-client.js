@@ -6,6 +6,7 @@ var chai = require('chai')
 
 process.env.FEATURE_URL = 'http://example.com/';
 process.env.FEATURE_DEVKEY = 'exp-dev-key-here';
+process.env.FEATURE_DEVKEY_SHARED = 'shared-exp-dev-key-here';
 
 
 describe('.config interface:', function() {
@@ -32,14 +33,16 @@ describe('.config interface:', function() {
       }).to.throw(Error, 'Cannot register experiments without `experiments`. Please see the docs');
     });
   });
-  describe('Given no devKey / featureUrl,', function() {
-    it('should fallback to `process.env`', function() {
+  describe('Given no optional Configurations', function() {
+    it('should fall back to `process.env`', function() {
       var feature = featureClient.configure({
-        experiments: ['testEx']
+        experiments: ['testEx'],
+        shared: { experiments: [] }
       });
 
       expect(feature.featureUrl).to.equal('http://example.com/');
       expect(feature.devKey).to.equal('exp-dev-key-here');
+      expect(feature.sharedDevKey).to.equal('shared-exp-dev-key-here');
     });
   });
   describe('Given a passed devKey / featureUrl,', function() {

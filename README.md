@@ -11,7 +11,7 @@ var feature = featureClient.configure({
   devKey: 'put the XPRMNTL devkey for your app here',
   experiments: [  'testExp1', 'testExp2' ],
   shared: {
-    repo: 'username/repo',
+    devKey: 'put the XPRMNTL devkey for your shared app here',
     experiments: [ 'sharedExp1', 'sharedExp2' ]
   }
 });
