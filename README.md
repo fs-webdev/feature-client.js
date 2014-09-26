@@ -45,6 +45,15 @@ Necessary components:
   description: 'Here\'s my description of my experiment. This helps set context for anyone who wants to know what it is for.'
 }
 ```
+- `timeout`
+  - This is the number of milliseconds after which the request should time out.
+  - May be disabled by setting to `false` or `0`
+  - Defaults to 5000 (5s)
+- `shared`
+  - This object allows you to configure and accept configuration for a shared set of experiments. If, for example, you have a separate set of experiments for your site-wide theme, you would configure those here, shared among your applications.
+  - This object has two properties:
+    - `devKey` - The devKey for the shared experiment data
+    - `experiments` - An array of shared experiments. Same format as app-level experiments.
 
 ### Announcement
 This step preforms the fetching of the configuration against the XPRMNTL dashboard. Any new experiments get registered and default either to `false` or to whatever you've set as your `default` for that experiment.
