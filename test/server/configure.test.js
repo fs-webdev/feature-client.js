@@ -72,6 +72,14 @@ describe('.config interface:', function() {
       expect(feature.config.experiments).to.eql([{ name: 'testEx4', default: true, description: 'Description' }]);
     });
   });
+  describe('Given no timeout, ', function() {
+    it('should set timeout to be 5s', function() {
+      var feature = featureClient.configure({
+        experiments: ['test']
+      });
 
+      expect(feature.timeout).to.eql(5000);
+    });
+  });
 
 });
