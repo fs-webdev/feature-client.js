@@ -45,6 +45,16 @@ describe('.config interface:', function() {
       expect(feature._settings.timeout).to.equal(5000);
     });
   });
+  describe('Given a featureUrl without a trailing slash', function() {
+    it('should add a trailing slash', function() {
+      feature.configure({
+        experiments: ['blargh'],
+        featureUrl: 'https://example.thingy.com'
+      });
+
+      expect(feature._settings.featureUrl).to.equal('https://example.thingy.com/');
+    });
+  });
   describe('Given a passed devKey / featureUrl,', function() {
     it('should not fallback to `process.env`', function() {
       feature.configure({
