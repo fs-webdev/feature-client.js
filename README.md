@@ -5,9 +5,9 @@
 This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/feature) product.
 
 ```js
-var featureClient = require('feature-client');
+var feature = require('feature-client');
 
-var feature = featureClient.configure({
+feature.configure({
   devKey: 'put the XPRMNTL devkey for your app here',
   experiments: [  'testExp1', 'testExp2' ],
   shared: {
@@ -66,7 +66,10 @@ feature.announce(function(err, data) {
 });
 feature.announce().then(function success(data) {
   // Handle the configuration here
-}, function failure(err) {
+}, function failure(resp) {
   // Handle failure here
+  var err = resp[0];
+  var defaults = resp[1];
 );
 ```
+In case of XPRMNTL failure, the defaults are returned.
