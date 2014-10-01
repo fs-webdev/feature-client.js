@@ -54,6 +54,10 @@ Necessary components:
   - This object has two properties:
     - `devKey` - The devKey for the shared experiment data
     - `experiments` - An array of shared experiments. Same format as app-level experiments.
+- `reference`
+  - This string determines which "reference" is making the request.
+  - If this value is sent, only that reference's configuration is sent back instead of all of them.
+  - Currently supported: "local", "int" (integration), "beta", "prod"
 
 ### Announcement
 This step preforms the fetching of the configuration against the XPRMNTL dashboard. Any new experiments get registered and default either to `false` or to whatever you've set as your `default` for that experiment.

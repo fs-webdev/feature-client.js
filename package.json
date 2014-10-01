@@ -1,6 +1,6 @@
 {
   "name": "feature-client",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Node.js client for consumption of XPRMNTL Feature",
   "main": "./lib/index.js",
   "author": "Dan Crews <crewsd@gmail.com>",
