@@ -1,6 +1,6 @@
 {
   "name": "feature-client",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Node.js client for consumption of XPRMNTL Feature",
   "main": "./lib/index.js",
   "author": "Dan Crews <crewsd@gmail.com>",
@@ -8,7 +8,7 @@
   "dependencies": {
     "debug": "^2.0.0",
     "q": "^1.0.1",
-    "superagent": "^0.18.2"
+    "superagent": "^0.20.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
