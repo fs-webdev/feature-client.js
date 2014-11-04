@@ -16,6 +16,11 @@ feature.configure({
   }
 });
 
+feature.cron('* * * * *', function(err, settings) {
+  // Reload your settings into memory
+});
+
+// This step must be called last
 feature.announce().then(function(settings) {
   // Load settings into memory; start your app  
 });
@@ -58,6 +63,31 @@ Necessary components:
   - This string determines which "reference" is making the request.
   - If this value is sent, only that reference's configuration is sent back instead of all of them.
   - Currently supported: "local", "int" (integration), "beta", "prod"
+
+
+### Cron Job Subscription
+Use of the cron allows you to refetch your configuration on whatever period you'd like.
+
+
+```js
+feature.cron('* * * * *', function(err, settings) {
+  // This calls every minute (5 stars)
+  // Handle your re-configuration and errors here.
+});
+```
+
+```js
+feature.cron('*/30 * * * * *', function(err, settings) {
+  // This calls every 30 seconds
+  // Handle your re-configuration and errors here.
+});
+```
+feature.cron accepts two parameters:
+- `cronTime`
+  - string in the [Cron format](http://en.wikipedia.org/wiki/Cron#Predefined_scheduling_definitions). Since it uses [node-cron](https://github.com/ncb000gt/node-cron), it also allows you to add an optional 6th item at the beginning for seconds
+- `handler`
+  - This function should have an arity of 2 to accept an error and the new configuration settings, and it gets called on each refetch attempt.
+
 
 ### Announcement
 This step preforms the fetching of the configuration against the XPRMNTL dashboard. Any new experiments get registered and default either to `false` or to whatever you've set as your `default` for that experiment.
