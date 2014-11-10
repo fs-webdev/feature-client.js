@@ -90,7 +90,7 @@ feature.cron accepts two parameters:
 
 
 ### Announcement
-This step preforms the fetching of the configuration against the XPRMNTL dashboard. Any new experiments get registered and default either to `false` or to whatever you've set as your `default` for that experiment.
+This step sends your configuration to the XPRMTNL dashboard to update and fetch the remote configuration. Any new experiments get registered and default either to `false` or to whatever you've set as your `default` for that experiment.
 
 This is an asynchronous step that returns a Q.promise and/or accepts a callback:
 
@@ -98,6 +98,7 @@ This is an asynchronous step that returns a Q.promise and/or accepts a callback:
 feature.announce(function(err, data) {
   // Handle the configuration or failure here
 });
+
 feature.announce().then(function success(data) {
   // Handle the configuration here
 }, function failure(resp) {
@@ -107,3 +108,24 @@ feature.announce().then(function success(data) {
 );
 ```
 In case of XPRMNTL failure, the defaults are returned.
+
+### Loading
+In your development environment, when you're creating and working with new experiments, you will call `announce` whenever you start your application. If you're in a production environment, you no longer need to check to see if there are new experiments, so you need not send your full configuration to the server. In this case, you simply need to `load`.
+
+The callback and/or handlers for `load` and `announce` are expected to work the same, but `load`ing will only fetch the remote configuration, rather than potentially updating that information based on the configuration in this app. This can be a time-saver for your build process.
+
+```js
+feature.load(function(err, data) {
+  // Handle the configuration or failure here
+});
+
+feature.load().then(function success(data) {
+  // Handle the configuration here
+}, function failure(resp) {
+  // Handle failure here
+  var err = resp[0];
+  var defaults = resp[1];
+});
+
+
+```
