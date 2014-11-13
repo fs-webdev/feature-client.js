@@ -86,4 +86,16 @@ describe('.config interface:', function() {
     });
   });
 
+  describe('Plugins', function() {
+    it('should be able to add functionality to the core', function() {
+      feature.use(function(client) {
+        client.plugin = function() {
+          return true;
+        };
+      });
+
+      expect(feature.plugin()).to.equal(true);
+    });
+  });
+
 });
