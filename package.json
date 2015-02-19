@@ -9,7 +9,8 @@
     "cron": "^1.0.5",
     "debug": "^2.0.0",
     "q": "^1.0.1",
-    "superagent": "^0.20.0"
+    "superagent": "^0.20.0",
+    "xpr-util-validation": "0.0.1"
   },
   "devDependencies": {
     "chai": "^1.9.1",
