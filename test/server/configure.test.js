@@ -86,7 +86,7 @@ describe('.config interface:', function() {
     });
   });
   describe('Given experiment objects with an invalid experiment, ', function() {
-    it('should retain names, defaults, and descriptions', function() {
+    it('should remove any invalid experiments', function() {
       feature.configure({
         experiments: [{ name: 'testEx3 with whitespace', default: true, description: 'Description' }, { name: 'testEx4', default: true, description: 'Description' }]
       });
