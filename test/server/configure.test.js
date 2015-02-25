@@ -85,6 +85,15 @@ describe('.config interface:', function() {
       expect(feature._appConfig.experiments).to.eql([{ name: 'testEx4', default: true, description: 'Description' }]);
     });
   });
+  describe('Given experiment objects with an invalid experiment, ', function() {
+    it('should retain names, defaults, and descriptions', function() {
+      feature.configure({
+        experiments: [{ name: 'testEx3 with whitespace', default: true, description: 'Description' }, { name: 'testEx4', default: true, description: 'Description' }]
+      });
+
+      expect(feature._appConfig.experiments).to.eql([{ name: 'testEx4', default: true, description: 'Description' }]);
+    });
+  });
 
   describe('Plugins', function() {
     it('should be able to add functionality to the core', function() {
