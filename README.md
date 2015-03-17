@@ -1,6 +1,9 @@
-[![XPRMNTL](https://raw.githubusercontent.com/XPRMNTL/XPRMNTL.github.io/master/images/ghLogo.png)](https://github.com/XPRMNTL/XPRMNTL.github.io)
+[![XPRMNTL][logo-image]][logo-url]
 # Feature-Client.js
-[![Build Status](https://travis-ci.org/XPRMNTL/feature-client.js.svg?branch=master)](https://travis-ci.org/XPRMNTL/feature-client.js) [![NPM version](https://img.shields.io/npm/v/feature-client.svg)](https://www.npmjs.org/package/feature-client)
+[![Build Status][build-image]][build-url]
+[![NPM version][npm-image]][npm-url]
+[![Downloads][downloads-image]][downloads-url]
+[![Tips][gratipay-image]][gratipay-url]
 
 This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/feature) product.
 
@@ -22,7 +25,7 @@ feature.cron('* * * * *', function(err, settings) {
 
 // This step must be called last
 feature.announce().then(function(settings) {
-  // Load settings into memory; start your app  
+  // Load settings into memory; start your app
 });
 ```
 
@@ -129,3 +132,14 @@ feature.load().then(function success(data) {
 
 
 ```
+
+[logo-image]: https://raw.githubusercontent.com/XPRMNTL/XPRMNTL.github.io/master/images/ghLogo.png
+[logo-url]: https://github.com/XPRMNTL/XPRMNTL.github.io
+[build-image]: https://travis-ci.org/XPRMNTL/feature-client.js.svg?branch=master
+[build-url]: https://travis-ci.org/XPRMNTL/feature-client
+[npm-image]: https://img.shields.io/npm/v/feature-client.svg
+[npm-url]: https://www.npmjs.org/package/feature-client
+[downloads-image]: https://img.shields.io/npm/dm/feature-client.svg
+[downloads-url]: https://www.npmjs.org/package/feature-client
+[gratipay-image]: https://img.shields.io/gratipay/dncrews.svg
+[gratipay-url]: https://www.gratipay.com/dncrews/
