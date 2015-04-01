@@ -5,7 +5,7 @@
 [![Downloads][downloads-image]][downloads-url]
 [![Tips][gratipay-image]][gratipay-url]
 
-This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/feature) product.
+This is a Node.js library for the consumption of [XPRMNTL](https://github.com/XPRMNTL/xpr-dashboard) product.
 
 ```js
 var feature = require('feature-client');
