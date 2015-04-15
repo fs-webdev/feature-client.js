@@ -1,6 +1,6 @@
 {
   "name": "feature-client",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Node.js client for consumption of XPRMNTL Feature",
   "main": "./lib/index.js",
   "author": "Dan Crews <crewsd@gmail.com>",
@@ -16,7 +16,7 @@
     "debug": "^2.0.0",
     "q": "^1.0.1",
     "superagent": "^0.20.0",
-    "xpr-util-validation": "^0.0.2"
+    "xpr-util-validation": "git+https://github.com/fs-webdev/xpr-util-validation.js.git#0.1.0"
   },
   "devDependencies": {
     "chai": "^1.9.1",
