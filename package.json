@@ -15,7 +15,7 @@
     "cron": "^1.0.5",
     "debug": "^2.0.0",
     "q": "^1.0.1",
-    "superagent": "^0.20.0",
+    "superagent": "^2.0.0",
     "xpr-util-validation": "git+https://github.com/fs-webdev/xpr-util-validation.js.git#0.1.0"
   },
   "devDependencies": {
